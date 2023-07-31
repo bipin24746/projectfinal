@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 31, 2023 at 06:22 PM
+-- Generation Time: Jul 31, 2023 at 08:13 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -63,14 +63,6 @@ CREATE TABLE `booking` (
   `email` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `booking`
---
-
-INSERT INTO `booking` (`id`, `movie_id`, `show_date`, `show_time`, `seat_id`, `total_price`, `booking_date`, `booking_time`, `fname`, `email`) VALUES
-(8, 58, '2023-08-01', '00:00:00', 1, '22', '2023-07-31', '21:53:27', 'Bipin Sainju Shrestha', 'sainjubipin24746@gmail.com'),
-(9, 58, '2023-08-01', '00:00:00', 2, '22', '2023-07-31', '21:53:27', 'Bipin Sainju Shrestha', 'sainjubipin24746@gmail.com');
-
 -- --------------------------------------------------------
 
 --
@@ -110,7 +102,7 @@ INSERT INTO `movie` (`id`, `name`, `genre`, `industry`, `language`, `duration`, 
 (55, 'bipin', 'comedy', 'hollywood', 'english', '2hrs 34min 7sec', '24/07/2022', 'ant', 'heros', '', '32', '', '2023-07-23', '2023-07-24', '2023-01-01', '05:04:00', '00:00:00', '00:00:00'),
 (56, 'gamer', '1', 'hollywood', 'english', '2hrs 34min 7sec', '24/07/2022', 'aven', 'avengers', '', '23', '', '2023-07-20', '2023-07-23', '2023-01-01', '02:02:00', '00:00:00', '00:00:00'),
 (57, 'Last Name', '1', 'hollywood', 'english', '2hrs 34min 7sec', '24/07/2022', 'aven', 'hero', '', '234', '', '2023-07-27', '2023-07-29', '2023-01-01', '01:03:00', '00:00:00', '00:00:00'),
-(58, 'Mobile No.', 'comedy', 'Bollywood', 'english', '2hrs 34min 7sec', '24/07/2022', 'villian', 'hero', '', '11', 'Screenshot (849).png', '2023-08-01', '2023-08-03', '0000-00-00', '23:40:00', '23:40:00', '01:40:00');
+(58, 'Mobile No.', '1', 'Bollywood', 'english', '2hrs 34min 7sec', '24/07/2022', 'villian', 'hero', '', '11', 'Screenshot (849).png', '2023-08-01', '2023-08-03', '2023-08-05', '23:40:00', '10:40:00', '01:40:00');
 
 -- --------------------------------------------------------
 
@@ -214,7 +206,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `movie`
