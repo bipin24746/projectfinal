@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 05, 2023 at 03:25 PM
+-- Generation Time: Aug 07, 2023 at 05:07 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -63,6 +63,15 @@ CREATE TABLE `booking` (
   `email` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `booking`
+--
+
+INSERT INTO `booking` (`id`, `movie_id`, `show_date`, `show_time`, `seat_id`, `total_price`, `booking_date`, `booking_time`, `fname`, `email`) VALUES
+(7, 58, '2023-08-05', '01:40:00', 1, '33', '2023-08-05', '19:18:52', 'Bipin', 'bipinsainju24746@gmail.com'),
+(8, 58, '2023-08-05', '01:40:00', 3, '33', '2023-08-05', '19:18:52', 'Bipin', 'bipinsainju24746@gmail.com'),
+(9, 58, '2023-08-05', '01:40:00', 7, '33', '2023-08-05', '19:18:52', 'Bipin', 'bipinsainju24746@gmail.com');
+
 -- --------------------------------------------------------
 
 --
@@ -74,7 +83,7 @@ CREATE TABLE `coming_soon` (
   `name` varchar(100) NOT NULL,
   `reldate` date NOT NULL,
   `trailer` text NOT NULL,
-  `image_path` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
   `genres` varchar(255) NOT NULL,
   `director` varchar(100) NOT NULL,
   `cast` text NOT NULL,
@@ -86,9 +95,13 @@ CREATE TABLE `coming_soon` (
 -- Dumping data for table `coming_soon`
 --
 
-INSERT INTO `coming_soon` (`id`, `name`, `reldate`, `trailer`, `image_path`, `genres`, `director`, `cast`, `language`, `industry`) VALUES
-(1, 'Bipin Sainju Shrestha', '2023-08-17', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/7KKVb0_IdD4\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>', '', '', '', '', '', ''),
-(2, 'Mobile No.', '2023-08-17', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/V056WNg3ECo\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>', 'imagesavengers.jpg', '', '', '', '', '');
+INSERT INTO `coming_soon` (`id`, `name`, `reldate`, `trailer`, `image`, `genres`, `director`, `cast`, `language`, `industry`) VALUES
+(3, 'qw qww', '2023-08-12', '', 'application software.jpg', 'asd', 'hero', 'q', 'english', 'Bollywood'),
+(4, 'Last Name', '2023-08-19', '', '245105196_231794978842981_2833975674910363695_n.jpg', 'asd', 'marvel', 'qw', 'english', 'Bollywood'),
+(5, 'New Movie', '2023-08-13', '', '244751569_2946864365643339_6249855058722978539_n.jpg', 'asd', 'hero', 'ads', 'english', 'Bollywood'),
+(6, 'New Movie', '2023-08-13', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/kd7Hu5j6VVY\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>', '244751569_2946864365643339_6249855058722978539_n.jpg', 'asd', 'hero', 'ads', 'english', 'Bollywood'),
+(7, 'New Movie', '2023-08-13', 'https://youtu.be/eM8Mjuq4MwQ', '244751569_2946864365643339_6249855058722978539_n.jpg', '1', 'hero', 'ads', 'english', 'Bollywood'),
+(8, 'Mobile No.', '2023-08-18', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/4G5ScpHkuLA\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>', 's-l1600.jpg', 'welcom', 'hero', 'qweqweqwe', 'english', 'Bollywood');
 
 -- --------------------------------------------------------
 
@@ -129,7 +142,8 @@ INSERT INTO `movie` (`id`, `name`, `genre`, `industry`, `language`, `duration`, 
 (55, 'bipin', '1', 'hollywood', 'english', '2hrs 34min 7sec', '24/07/2022', 'ant', 'heros', '', '32', 'Screenshot (880).png', '2023-07-23', '2023-07-24', '2023-01-01', '05:04:00', '00:00:00', '00:00:00'),
 (56, 'gamer', '1', 'hollywood', 'english', '2hrs 34min 7sec', '24/07/2022', 'aven', 'avengers', '', '23', '', '2023-07-20', '2023-07-23', '2023-01-01', '02:02:00', '00:00:00', '00:00:00'),
 (57, 'Last Name', '1', 'hollywood', 'english', '2hrs 34min 7sec', '24/07/2022', 'aven', 'hero', '', '234', 'Screenshot (6409).png', '2023-07-27', '2023-07-29', '2023-01-01', '01:03:00', '00:00:00', '00:00:00'),
-(58, 'New Movie', '1', 'Bollywood', 'english', '2hrs 34min 7sec', '24/07/2022', 'villian', 'hero', '', '11', 'Screenshot (5314).png', '2023-08-01', '2023-08-03', '2023-08-05', '23:40:00', '10:40:00', '01:40:00');
+(58, 'New Movie', '1', 'Bollywood', 'english', '2hrs 34min 7sec', '24/07/2022', 'villian', 'hero', '', '11', 'Screenshot (5314).png', '2023-08-01', '2023-08-03', '2023-08-05', '23:40:00', '10:40:00', '01:40:00'),
+(59, 'Bipin Sainju Shrestha', 'comedy', 'hollywood', 'english', '2hrs 34min 7sec', '24/07/2022', 'villian', 'avengers', '', '23', '246005566_2911087375781953_3401195559941103366_n.jpg', '2023-08-27', '2023-09-01', '0000-00-00', '01:01:00', '02:02:00', '03:04:00');
 
 -- --------------------------------------------------------
 
@@ -240,19 +254,19 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `coming_soon`
 --
 ALTER TABLE `coming_soon`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `movie`
 --
 ALTER TABLE `movie`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT for table `otp`
